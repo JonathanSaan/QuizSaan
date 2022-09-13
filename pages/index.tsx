@@ -1,11 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import { useState } from "react";
 
-import { Container, Main } from "../styles/home";
+import Home from "./components/Home";
+import Question from "./components/Question";
+import { Container } from "../styles/home";
 
 
-const Home: NextPage = () => {
+const PrincipalContainer: NextPage = () => {
+  const [quizState, dispatch] = useState<bool>(false);
+  
+  const Quiz = () => {
+    dispatch(quizState === false ? true : false);
+  };
+  
   return (
     <Container>
       <Head>
@@ -13,18 +21,12 @@ const Home: NextPage = () => {
         <meta name="description" content="A Quiz made with NextJs by JonathanSaan" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Main>
-        <h1>
-          Quiz
-        </h1>
-        <button>
-          Start
-        </button>
-      </Main>
+      
+      {quizState === false && <Home Quiz={Quiz} />}
+      {quizState === true && <Question/>}
       
     </Container>
   );
 };
 
-export default Home
+export default PrincipalContainer;
