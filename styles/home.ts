@@ -23,8 +23,7 @@ export const Main = styled.div`
   
   button:hover {
     transition: 300ms;
-    background-color: red;
-    filter: Brightness(0.8);
+    filter: Brightness(1.4);
   }
   
   button:active {
