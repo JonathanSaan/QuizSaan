@@ -1,11 +1,11 @@
-import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 import { Main } from "../../styles/home";
 
 
 const Question = () => {
   return (
-    <Zoom>
+    <Fade>
       <Main>
         <h1>
           Question 1
@@ -14,7 +14,7 @@ const Question = () => {
           answer 1
         </button>
       </Main>
-    </Zoom>
+    </Fade>
   );
 };
 
