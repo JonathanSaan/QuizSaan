@@ -23,10 +23,11 @@ export const Main = styled.div`
   
   button:hover {
     transition: 300ms;
-    transform: scale(0.98);
+    background-color: red;
+    filter: Brightness(0.8);
   }
   
   button:active {
-    filter: Brightness(0.8);
+    transform: scale(0.96);
   }
 `;
