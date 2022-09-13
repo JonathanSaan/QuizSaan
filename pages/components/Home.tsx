@@ -1,7 +1,7 @@
 import { Main } from "../../styles/home";
 
 interface Props {
-  Quiz(): bool;
+  Quiz(): void;
 }
 
 
