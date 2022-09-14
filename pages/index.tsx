@@ -8,7 +8,7 @@ import { Container } from "../styles/home";
 
 
 const PrincipalContainer: NextPage = () => {
-  const [quizState, dispatch] = useState<bool>(false);
+  const [quizState, dispatch] = useState<boolean>(false);
   
   const Quiz = () => {
     dispatch(quizState === false ? true : false);
