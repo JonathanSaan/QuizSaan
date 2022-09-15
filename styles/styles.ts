@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 0 2em;
+  padding: 0 1em;
 `;
 
 export const Main = styled.div`
@@ -34,6 +34,8 @@ export const Main = styled.div`
 
 
 export const QuestionText = styled.div`
+  align-items: center;
+  
   h1 {
     font-size: 7vh;
   }
