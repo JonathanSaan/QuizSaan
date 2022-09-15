@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { Main, QuestionText, OptionsContainer, Confirm } from "../../styles/styles";
+import { Main, QuestionText, OptionsContainer } from "../../styles/styles";
 import questions from "../../data/questions";
 
 const Question = () => {
