@@ -4,7 +4,8 @@ import { useState } from "react";
 
 import Home from "./components/Home";
 import Question from "./components/Question";
-import { Container } from "../styles/home";
+import End from "./components/GameOver";
+import { Container } from "../styles/styles";
 
 
 const PrincipalContainer: NextPage = () => {

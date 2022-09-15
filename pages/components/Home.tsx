@@ -1,4 +1,4 @@
-import { Main } from "../../styles/home";
+import { Main } from "../../styles/styles";
 
 interface Props {
   Quiz(): void;

@@ -1,34 +1,40 @@
 const data = [
   {
-    question: "What's Vanilla JavaScript?",
-    options: [
-      "JavaScript puro",
-      "Uma biblioteca JavaScript",
-      "Um framework JavaScript",
-      "Um compilador de JavaScript",
+    questionText: "Qual o idioma falado no Brasil?",
+    answerOptions: [
+      { answerText: "Português", isCorrect: true },
+      { answerText: "Inglês", isCorrect: false },
+      { answerText: "Francês", isCorrect: false },
+      { answerText: "Alemão", isCorrect: false },
     ],
-    answer: "JavaScript puro",
   },
   {
-    question: "Com qual instrução declaramos uma constante em JavaScript?",
-    options: ["const", "let", "var", "define"],
-    answer: "const",
+    questionText:
+      "Quais os países que têm a maior e a menor expectativa de vida do mundo?",
+    answerOptions: [
+      { answerText: "Japão e Serra Leoa", isCorrect: true },
+      { answerText: "Austrália e Afeganistã", isCorrect: false },
+      { answerText: "Itália e Chade", isCorrect: false },
+      { answerText: "Brasil e Congo", isCorrect: false },
+    ],
   },
   {
-    question: "Qual dos tipos de dado a seguir não existe em JavaScript?",
-    options: ["string", "number", "boolean", "float"],
-    answer: "float",
+    questionText: "Qual empresa criou o Iphone?",
+    answerOptions: [
+      { answerText: "Apple", isCorrect: true },
+      { answerText: "Intel", isCorrect: false },
+      { answerText: "Amazon", isCorrect: false },
+      { answerText: "Microsoft", isCorrect: false },
+    ],
   },
   {
-    question: "Qual dos métodos a seguir seleciona um elemento?",
-    options: ["querySelector", "parseInt", "sort", "reduce"],
-    answer: "querySelector",
-  },
-  {
-    question:
-      "Qual destas propriedades da a quantidade de elementos de um array?",
-    options: ["qty", "length", "items", "index"],
-    answer: "length",
+    questionText: "Como aprender a programar?",
+    answerOptions: [
+      { answerText: "Praticando o que se aprende", isCorrect: true },
+      { answerText: "Vendo vídeo", isCorrect: false },
+      { answerText: "Lendo", isCorrect: false },
+      { answerText: "Dormindo", isCorrect: false },
+    ],
   },
 ];
 

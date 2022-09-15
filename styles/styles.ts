@@ -13,7 +13,7 @@ export const Main = styled.div`
   
   h1 {
     font-size: 3em;
-    margin: 0 0 20vh 0;
+    margin: 0 0 17vh 0;
   }
   
   button {
@@ -28,5 +28,37 @@ export const Main = styled.div`
   
   button:active {
     transform: scale(0.96);
+  }
+`;
+
+
+
+export const QuestionText = styled.div`
+  h1 {
+    font-size: 7vh;
+  }
+  
+  @media(max-width: 768px) {
+    h1 {
+      font-size: 6vw;
+    }
+  }
+`;
+
+export const OptionsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  button {
+    margin: .5vh 0;
+    min-width: 40vw;
+  }
+  
+  @media(max-width: 768px) {
+    button {
+      min-width: 60vw;
+    }
   }
 `;
