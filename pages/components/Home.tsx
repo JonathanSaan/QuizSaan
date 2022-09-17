@@ -1,4 +1,8 @@
-//import { Main } from "../../styles/styles";
+import { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { Main, Title } from "../../styles/home";
 
 interface Props {
@@ -7,8 +11,12 @@ interface Props {
 
 
 const Home = ({ StartQuiz }: Props) => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+  
   return (
-    <Main>
+    <Main data-aos="fade-in">
       <Title>
         Quiz
       </Title>

@@ -9,15 +9,26 @@ import { Container } from "../styles/home";
 
 
 const PrincipalContainer: NextPage = () => {
+  const [score, setScore] = useState<number>(0);
   const [showScore, setShowScore] = useState<boolean>(false);
   const [quizState, dispatch] = useState<number>(1);
   
-  const HandleScore = () => {
-    setShowScore(showScore === false ? true : false)
-  }
-  
   const StartQuiz = () => {
     dispatch(quizState + 1);
+  };
+  
+  const AddOneScore = () => {
+    setScore(score + 1);
+  };
+  
+  const HandleShowScore = () => {
+    setShowScore(showScore === false ? true : false);
+  };
+  
+  const ResetQuiz = () => {
+    dispatch(quizState - 1);
+    setShowScore(showScore === true ? false : true);
+    setScore(0);
   };
   
   return (
@@ -33,9 +44,9 @@ const PrincipalContainer: NextPage = () => {
        ) : (
         <>
           {showScore ? (
-            <End/>
+            <End score={score} ResetQuiz={ResetQuiz} />
           ) : ( 
-            <Question HandleScore={HandleScore} />
+            <Question AddOneScore={AddOneScore} HandleShowScore={HandleShowScore} />
           )}
         </>
        )}

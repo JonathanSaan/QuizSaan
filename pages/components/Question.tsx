@@ -8,17 +8,17 @@ import questions from "../../data/questions";
 import { Main, Title, OptionsContainer } from "../../styles/question";
 
 interface Props {
-  HandleScore(): void;
+  HandleShowScore(): void;
+  AddOneScore(): void;
 }
 
 
-const Question = ({ HandleScore }: Props) => {
-  const [score, setScore] = useState<number>(0);
+const Question = ({ HandleShowScore, AddOneScore }: Props) => {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
     
   const handleAnswer = (isCorrect: boolean) => {
     if (isCorrect) {
-      setScore(score + 1);
+      AddOneScore();
     };
 
     const nextQuestion = currentQuestion + 1;
@@ -27,7 +27,7 @@ const Question = ({ HandleScore }: Props) => {
       return setCurrentQuestion(nextQuestion);
     };
     
-    HandleScore();
+    HandleShowScore();
   };
     
   useEffect(() => {

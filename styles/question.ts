@@ -6,6 +6,10 @@ export const Main = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  
+  @media(max-height: 500px) {
+    min-height: 30em;
+  }
 `;
 
 export const Title = styled.h1`
@@ -26,7 +30,7 @@ export const OptionsContainer = styled.div`
   align-items: center;
   
   button {
-    border: 1px solid gray;
+    border: 1px solid #808080ff;
     margin: .5vh 0;
     padding: 1em 2em;
     min-height: 4em;
