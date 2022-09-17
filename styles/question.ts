@@ -29,7 +29,8 @@ export const OptionsContainer = styled.div`
     border: 1px solid gray;
     margin: .5vh 0;
     padding: 1em 2em;
-    min-width: 40vw;
+    min-height: 4em;
+    min-width: 45vw;
   }
   
   button:hover {
@@ -44,6 +45,7 @@ export const OptionsContainer = styled.div`
   @media(max-width: 768px) {
     button {
       width: 70vw;
+      max-width: 75vw;
     }
   }
 `;

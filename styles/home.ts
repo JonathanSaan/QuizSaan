@@ -27,6 +27,10 @@ export const Main = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3em;
+  font-size: 7vh;
   margin: 0 0 17vh 0;
+  
+  @media(max-width: 768px) {
+    font-size: 3em;
+  }
 `;
