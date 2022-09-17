@@ -1,17 +1,18 @@
-import { Main } from "../../styles/styles";
+//import { Main } from "../../styles/styles";
+import { Main, Title } from "../../styles/home";
 
 interface Props {
-  Quiz(): void;
+  StartQuiz(): void;
 }
 
 
-const Home = ({ Quiz }: Props) => {
+const Home = ({ StartQuiz }: Props) => {
   return (
     <Main>
-      <h1>
+      <Title>
         Quiz
-      </h1>
-      <button onClick={Quiz}>
+      </Title>
+      <button onClick={StartQuiz}>
         Start
       </button>
     </Main>

@@ -3,10 +3,16 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { Main, QuestionText, OptionsContainer } from "../../styles/styles";
+import End from "./GameOver";
 import questions from "../../data/questions";
+import { Main, Title, OptionsContainer } from "../../styles/question";
 
-const Question = () => {
+interface Props {
+  HandleScore(): void;
+}
+
+
+const Question = ({ HandleScore }: Props) => {
   const [score, setScore] = useState<number>(0);
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
     
@@ -18,8 +24,10 @@ const Question = () => {
     const nextQuestion = currentQuestion + 1;
     
     if (nextQuestion < questions.length) {
-      setCurrentQuestion(nextQuestion);
+      return setCurrentQuestion(nextQuestion);
     };
+    
+    HandleScore();
   };
     
   useEffect(() => {
@@ -28,11 +36,9 @@ const Question = () => {
   
   return (
     <Main data-aos="fade-in">
-      <QuestionText>
-        <h1>
-          {questions[currentQuestion].questionText}
-        </h1>
-      </QuestionText>
+      <Title>
+        {questions[currentQuestion].questionText}
+      </Title>
       
       <OptionsContainer>
         {questions[currentQuestion].answerOptions.map((option, index) => (

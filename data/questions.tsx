@@ -1,39 +1,39 @@
 const data = [
   {
-    questionText: "Qual o idioma falado no Brasil?",
+    questionText: "What does HTML stand for?",
     answerOptions: [
-      { answerText: "Português", isCorrect: true },
-      { answerText: "Inglês", isCorrect: false },
-      { answerText: "Francês", isCorrect: false },
-      { answerText: "Alemão", isCorrect: false },
+      { answerText: "Hyper Text Markup Language", isCorrect: true },
+      { answerText: "Hyper Text Preprocessor", isCorrect: false },
+      { answerText: "Hyper Text Multiple Language", isCorrect: false },
+      { answerText: "Hyper Tool Multi Language", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "When the internet was invented?",
+    answerOptions: [
+      { answerText: "1980", isCorrect: false },
+      { answerText: "1985", isCorrect: false },
+      { answerText: "1983", isCorrect: true },
+      { answerText: "1979", isCorrect: false },
     ],
   },
   {
     questionText:
-      "Quais os países que têm a maior e a menor expectativa de vida do mundo?",
+      "Which country has the most access to internet?",
     answerOptions: [
-      { answerText: "Japão e Serra Leoa", isCorrect: true },
-      { answerText: "Austrália e Afeganistã", isCorrect: false },
-      { answerText: "Itália e Chade", isCorrect: false },
-      { answerText: "Brasil e Congo", isCorrect: false },
+      { answerText: "United States", isCorrect: false },
+      { answerText: "Japan", isCorrect: false },
+      { answerText: "China", isCorrect: true },
+      { answerText: "Brazil", isCorrect: false },
     ],
   },
   {
-    questionText: "Qual empresa criou o Iphone?",
+    questionText: "How can you reduce the chances of being hacked?",
     answerOptions: [
-      { answerText: "Apple", isCorrect: true },
-      { answerText: "Intel", isCorrect: false },
-      { answerText: "Amazon", isCorrect: false },
-      { answerText: "Microsoft", isCorrect: false },
-    ],
-  },
-  {
-    questionText: "Como aprender a programar?",
-    answerOptions: [
-      { answerText: "Praticando o que se aprende", isCorrect: true },
-      { answerText: "Vendo vídeo", isCorrect: false },
-      { answerText: "Lendo", isCorrect: false },
-      { answerText: "Dormindo", isCorrect: false },
+      { answerText: "Keep your anti-virus software up to date", isCorrect: false },
+      { answerText: "Install all available updates to your operating system regularly", isCorrect: false },
+      { answerText: "Don't use open WiFi", isCorrect: false },
+      { answerText: "All of the above", isCorrect: true },
     ],
   },
 ];

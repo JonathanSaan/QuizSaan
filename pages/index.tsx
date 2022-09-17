@@ -5,14 +5,19 @@ import { useState } from "react";
 import Home from "./components/Home";
 import Question from "./components/Question";
 import End from "./components/GameOver";
-import { Container } from "../styles/styles";
+import { Container } from "../styles/home";
 
 
 const PrincipalContainer: NextPage = () => {
-  const [quizState, dispatch] = useState<boolean>(false);
+  const [showScore, setShowScore] = useState<boolean>(false);
+  const [quizState, dispatch] = useState<number>(1);
   
-  const Quiz = () => {
-    dispatch(quizState === false ? true : false);
+  const HandleScore = () => {
+    setShowScore(showScore === false ? true : false)
+  }
+  
+  const StartQuiz = () => {
+    dispatch(quizState + 1);
   };
   
   return (
@@ -22,10 +27,18 @@ const PrincipalContainer: NextPage = () => {
         <meta name="description" content="A Quiz made with NextJs by JonathanSaan" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      {quizState === false && <Home Quiz={Quiz} />}
-      {quizState === true && <Question/>}
-      
+       
+      {quizState === 1 ? (
+        <Home StartQuiz={StartQuiz} />
+       ) : (
+        <>
+          {showScore ? (
+            <End/>
+          ) : ( 
+            <Question HandleScore={HandleScore} />
+          )}
+        </>
+       )}
     </Container>
   );
 };
