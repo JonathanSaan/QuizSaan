@@ -47,16 +47,15 @@ const PrincipalContainer: NextPage = () => {
           {showScore ? (
             <End score={score} ResetQuiz={ResetQuiz} />
             
-            
           ) : ( 
             <Question AddOneScore={AddOneScore} HandleShowScore={HandleShowScore} />
           )}
         </>
        )}
     </Container>
-            //<Message />
   );
 };
+            //<Message />
 
 
 export default PrincipalContainer;

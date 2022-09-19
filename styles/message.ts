@@ -19,6 +19,6 @@ export const Title = styled.h1`
   margin: auto 0;
   
   @media(max-width: 768px) {
-    font-size: 2em;
+    font-size: 7vw;
   }
 `;

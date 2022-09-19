@@ -1,26 +1,18 @@
-import { useEffect } from "react";
-
 import Typewriter from "typewriter-effect";
-
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 import { Main, Title } from "../../styles/message";
 
 
 const Message = () => {
-  useEffect(() => {
-    //AOS.init({ duration: 2000 });
-  }, []);
-  //data-aos="fade-in
   return (
-    <Main>
+    <Main data-aos="fade-in">
       <Title>
         <Typewriter
           options={{
             autoStart: true,
-            loop: true,
-            strings=[
+            delay: 100,
+            deleteSpeed: 100,
+            loop: false,
+            strings: [
               'Hello?',
               'Is there someone else?',
               '...',

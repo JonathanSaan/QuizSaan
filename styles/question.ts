@@ -19,7 +19,7 @@ export const Title = styled.h1`
   max-width: 25em;
 
   @media(max-width: 768px) {
-    font-size: 2em;
+    font-size: 6vw;
   }
 `;
 

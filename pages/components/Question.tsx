@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import { motion, AnimatePresence } from "framer-motion";
-
 import End from "./GameOver";
 import questions from "../../data/questions";
 import { Main, Title, OptionsContainer } from "../../styles/question";
