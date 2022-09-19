@@ -22,3 +22,16 @@ export const Title = styled.h1`
     font-size: 7vw;
   }
 `;
+
+export const Image = styled.img`
+  margin: auto 0;
+  width: 5vw;
+  height: 5vh;
+  background: url("/public/image/cat.png") no-repeat center;
+  animation: mymove 1s infinite;
+  
+  @keyframes mymove {
+    0% {width: 10vw;}
+    100% {width: 100vw;}
+  }
+`;

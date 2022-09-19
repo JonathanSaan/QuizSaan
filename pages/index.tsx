@@ -11,7 +11,9 @@ import { Container } from "../styles/home";
 
 const PrincipalContainer: NextPage = () => {
   const [score, setScore] = useState<number>(0);
-  const [showScore, setShowScore] = useState<boolean>(false);
+  const [showEnd, setShowEnd] = useState<boolean>(false);
+  const [afterFiveMinutes, setAfterFiveMinutes] = useState<boolean>(false);
+  
   const [quizState, dispatch] = useState<number>(1);
   
   const StartQuiz = () => {
@@ -23,12 +25,12 @@ const PrincipalContainer: NextPage = () => {
   };
   
   const HandleShowScore = () => {
-    setShowScore(showScore === false ? true : false);
+    setShowEnd(showEnd === false ? true : false);
   };
   
   const ResetQuiz = () => {
     dispatch(quizState - 1);
-    setShowScore(showScore === true ? false : true);
+    setShowEnd(showEnd === true ? false : true);
     setScore(0);
   };
   
@@ -44,9 +46,14 @@ const PrincipalContainer: NextPage = () => {
         <Home StartQuiz={StartQuiz} />
        ) : (
         <>
-          {showScore ? (
-            <End score={score} ResetQuiz={ResetQuiz} />
-            
+          {showEnd ? (
+            <>
+              {afterFiveMinutes ? (
+                <Message />
+              ) : (
+                <End score={score} ResetQuiz={ResetQuiz} afterFiveMinutes={afterFiveMinutes} setAfterFiveMinutes={setAfterFiveMinutes}/>
+              )}
+            </>
           ) : ( 
             <Question AddOneScore={AddOneScore} HandleShowScore={HandleShowScore} />
           )}
@@ -55,7 +62,6 @@ const PrincipalContainer: NextPage = () => {
     </Container>
   );
 };
-            //<Message />
 
 
 export default PrincipalContainer;

@@ -27,7 +27,6 @@ const Question = ({ HandleShowScore, AddOneScore }: Props) => {
     HandleShowScore();
   };
   
-  //data-aos="fade-in"
   return (
     <Main data-aos="fade-in">
       <Title>
@@ -47,7 +46,5 @@ const Question = ({ HandleShowScore, AddOneScore }: Props) => {
     </Main>
   );
 };
-
-
 
 export default Question;

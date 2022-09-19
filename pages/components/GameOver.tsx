@@ -1,12 +1,22 @@
+import { useState, useEffect } from "react";
+
 import { Main, Title } from "../../styles/gameover";
 
 interface Props {
+  afterFiveMinutes: boolean;
+  setAfterFiveMinutes: boolean;
   score: number;
   ResetQuiz(): void;
 }
 
 
-const End = ({ score, ResetQuiz }: Props) => {
+const End = ({ score, afterFiveMinutes, setAfterFiveMinutes, ResetQuiz }: Props) => {
+  
+  useEffect(() => {
+   const timeout = setTimeout(() => {
+     setAfterFiveMinutes(afterFiveMinutes === false);
+   }, 240000);
+  }, []);
   
   return (
     <Main data-aos="fade-in">
