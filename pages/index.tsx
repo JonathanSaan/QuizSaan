@@ -5,6 +5,7 @@ import Head from "next/head";
 import Home from "./components/Home";
 import Question from "./components/Question";
 import End from "./components/GameOver";
+import Message from "./components/Message";
 import { Container } from "../styles/home";
 
 
@@ -38,20 +39,24 @@ const PrincipalContainer: NextPage = () => {
         <meta name="description" content="A Quiz made with NextJs by JonathanSaan" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-       
+      
       {quizState === 1 ? (
         <Home StartQuiz={StartQuiz} />
        ) : (
         <>
           {showScore ? (
             <End score={score} ResetQuiz={ResetQuiz} />
+            
+            
           ) : ( 
             <Question AddOneScore={AddOneScore} HandleShowScore={HandleShowScore} />
           )}
         </>
        )}
     </Container>
+            //<Message />
   );
 };
+
 
 export default PrincipalContainer;

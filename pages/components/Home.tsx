@@ -12,7 +12,8 @@ interface Props {
 
 const Home = ({ StartQuiz }: Props) => {
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 2500 });
+    AOS.refresh();
   }, []);
   
   return (

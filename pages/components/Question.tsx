@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { motion, AnimatePresence } from "framer-motion";
 
 import End from "./GameOver";
 import questions from "../../data/questions";
@@ -15,7 +14,7 @@ interface Props {
 
 const Question = ({ HandleShowScore, AddOneScore }: Props) => {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
-    
+  
   const handleAnswer = (isCorrect: boolean) => {
     if (isCorrect) {
       AddOneScore();
@@ -29,11 +28,8 @@ const Question = ({ HandleShowScore, AddOneScore }: Props) => {
     
     HandleShowScore();
   };
-    
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
   
+  //data-aos="fade-in"
   return (
     <Main data-aos="fade-in">
       <Title>
@@ -53,5 +49,7 @@ const Question = ({ HandleShowScore, AddOneScore }: Props) => {
     </Main>
   );
 };
+
+
 
 export default Question;
