@@ -1,21 +1,17 @@
-import { useState, useEffect } from "react";
-
+import { useEffect } from "react";
 import { Main, Title } from "../../styles/gameover";
 
 interface Props {
-  afterFiveMinutes: boolean;
-  setAfterFiveMinutes: boolean;
+  EventAfterFourMinutes(): void;
   score: number;
   ResetQuiz(): void;
 }
 
 
-const End = ({ score, afterFiveMinutes, setAfterFiveMinutes, ResetQuiz }: Props) => {
-  
+const GameOver = ({ EventAfterFourMinutes, score, ResetQuiz }: Props) => {
   useEffect(() => {
-   const timeout = setTimeout(() => {
-     setAfterFiveMinutes(afterFiveMinutes === false);
-   }, 240000);
+    const timeout = EventAfterFourMinutes();
+    return () => clearTimeout(timeout);
   }, []);
   
   return (
@@ -33,4 +29,4 @@ const End = ({ score, afterFiveMinutes, setAfterFiveMinutes, ResetQuiz }: Props)
   );
 };
 
-export default End;
+export default GameOver;

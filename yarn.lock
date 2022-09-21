@@ -225,10 +225,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@next/env@12.3.0":
-  "integrity" "sha512-PTJpjAFVbzBQ9xXpzMTroShvD5YDIIy46jQ7d4LrWpY+/5a8H90Tm8hE3Hvkc5RBRspVo7kvEOnqQms0A+2Q6w=="
-  "resolved" "https://registry.npmjs.org/@next/env/-/env-12.3.0.tgz"
-  "version" "12.3.0"
+"@next/env@12.3.1-canary.5":
+  "integrity" "sha512-YXlYgmtSbhDlk3mcoTBSPNRFrpXw8tjSSBv5Mcm25Cf/ExDY6ocoRm3lfCrMM7QLBIzt4r7RIDFiGrjDPmHG8Q=="
+  "resolved" "https://registry.npmjs.org/@next/env/-/env-12.3.1-canary.5.tgz"
+  "version" "12.3.1-canary.5"
 
 "@next/eslint-plugin-next@12.3.0":
   "integrity" "sha512-jVdq1qYTNDjUtulnE8/hkPv0pHILV4jMg5La99iaY/FFm20WxVnsAZtbNnMvlPbf8dc010oO304SX9yXbg5PAw=="
@@ -237,10 +237,10 @@
   dependencies:
     "glob" "7.1.7"
 
-"@next/swc-android-arm64@12.3.0":
-  "integrity" "sha512-OaI+FhAM6P9B6Ybwbn0Zl8YwWido0lLwhDBi9WiYCh4RQmIXAyVIoIJPHo4fP05+mXaJ/k1trvDvuURvHOq2qw=="
-  "resolved" "https://registry.npmjs.org/@next/swc-android-arm64/-/swc-android-arm64-12.3.0.tgz"
-  "version" "12.3.0"
+"@next/swc-android-arm64@12.3.1-canary.5":
+  "integrity" "sha512-7XY0dtZiduUyTRvVUrb7XNAUPqzi+CuXhVDsZ+mvT/FDZNGmvYlD/kP8h4dcDCjDuJF4JEqA8G0CMK2gUvB+Iw=="
+  "resolved" "https://registry.npmjs.org/@next/swc-android-arm64/-/swc-android-arm64-12.3.1-canary.5.tgz"
+  "version" "12.3.1-canary.5"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
@@ -543,7 +543,7 @@
   "resolved" "https://registry.npmjs.org/camelize/-/camelize-1.0.0.tgz"
   "version" "1.0.0"
 
-"caniuse-lite@^1.0.30001332":
+"caniuse-lite@^1.0.30001406":
   "integrity" "sha512-bWTlaXUy/rq0BBtYShc/jArYfBPjEV95euvZ8JVtO43oQExEN/WquoqpufFjNu4kSpi5cy5kMbNvzztWDfv1Jg=="
   "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001406.tgz"
   "version" "1.0.30001406"
@@ -1486,31 +1486,31 @@
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
-"next@12.3.0":
-  "integrity" "sha512-GpzI6me9V1+XYtfK0Ae9WD0mKqHyzQlGq1xH1rzNIYMASo4Tkl4rTe9jSqtBpXFhOS33KohXs9ZY38Akkhdciw=="
-  "resolved" "https://registry.npmjs.org/next/-/next-12.3.0.tgz"
-  "version" "12.3.0"
+"next@^12.3.1-canary.5":
+  "integrity" "sha512-JymWV9nm4vRP2On4frCQVWcBDF8FVwGQbYWd2QjgoXpSBOuKX9ITVjtNR4zkQ/nADDDHhCXKQHOo4aq1Pt6asQ=="
+  "resolved" "https://registry.npmjs.org/next/-/next-12.3.1-canary.5.tgz"
+  "version" "12.3.1-canary.5"
   dependencies:
-    "@next/env" "12.3.0"
+    "@next/env" "12.3.1-canary.5"
     "@swc/helpers" "0.4.11"
-    "caniuse-lite" "^1.0.30001332"
+    "caniuse-lite" "^1.0.30001406"
     "postcss" "8.4.14"
-    "styled-jsx" "5.0.6"
+    "styled-jsx" "5.0.7"
     "use-sync-external-store" "1.2.0"
   optionalDependencies:
-    "@next/swc-android-arm-eabi" "12.3.0"
-    "@next/swc-android-arm64" "12.3.0"
-    "@next/swc-darwin-arm64" "12.3.0"
-    "@next/swc-darwin-x64" "12.3.0"
-    "@next/swc-freebsd-x64" "12.3.0"
-    "@next/swc-linux-arm-gnueabihf" "12.3.0"
-    "@next/swc-linux-arm64-gnu" "12.3.0"
-    "@next/swc-linux-arm64-musl" "12.3.0"
-    "@next/swc-linux-x64-gnu" "12.3.0"
-    "@next/swc-linux-x64-musl" "12.3.0"
-    "@next/swc-win32-arm64-msvc" "12.3.0"
-    "@next/swc-win32-ia32-msvc" "12.3.0"
-    "@next/swc-win32-x64-msvc" "12.3.0"
+    "@next/swc-android-arm-eabi" "12.3.1-canary.5"
+    "@next/swc-android-arm64" "12.3.1-canary.5"
+    "@next/swc-darwin-arm64" "12.3.1-canary.5"
+    "@next/swc-darwin-x64" "12.3.1-canary.5"
+    "@next/swc-freebsd-x64" "12.3.1-canary.5"
+    "@next/swc-linux-arm-gnueabihf" "12.3.1-canary.5"
+    "@next/swc-linux-arm64-gnu" "12.3.1-canary.5"
+    "@next/swc-linux-arm64-musl" "12.3.1-canary.5"
+    "@next/swc-linux-x64-gnu" "12.3.1-canary.5"
+    "@next/swc-linux-x64-musl" "12.3.1-canary.5"
+    "@next/swc-win32-arm64-msvc" "12.3.1-canary.5"
+    "@next/swc-win32-ia32-msvc" "12.3.1-canary.5"
+    "@next/swc-win32-x64-msvc" "12.3.1-canary.5"
 
 "object-assign@^4.1.1":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
@@ -1898,10 +1898,10 @@
     "shallowequal" "^1.1.0"
     "supports-color" "^5.5.0"
 
-"styled-jsx@5.0.6":
-  "integrity" "sha512-xOeROtkK5MGMDimBQ3J6iPId8q0t/BDoG5XN6oKkZClVz9ISF/hihN8OCn2LggMU6N32aXnrXBdn3auSqNS9fA=="
-  "resolved" "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.6.tgz"
-  "version" "5.0.6"
+"styled-jsx@5.0.7":
+  "integrity" "sha512-b3sUzamS086YLRuvnaDigdAewz1/EFYlHpYBP5mZovKEdQQOIIYq8lApylub3HHZ6xFjV051kkGU7cudJmrXEA=="
+  "resolved" "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.7.tgz"
+  "version" "5.0.7"
 
 "supports-color@^5.3.0":
   "integrity" "sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow=="

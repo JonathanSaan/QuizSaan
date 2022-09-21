@@ -23,15 +23,21 @@ export const Title = styled.h1`
   }
 `;
 
-export const Image = styled.img`
-  margin: auto 0;
-  width: 5vw;
-  height: 5vh;
-  background: url("/public/image/cat.png") no-repeat center;
-  animation: mymove 1s infinite;
+export const JumpScare = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  
+  img {
+    animation: mymove 1s 1;
+    background: red;
+  }
   
   @keyframes mymove {
-    0% {width: 10vw;}
-    100% {width: 100vw;}
+    0% {height: 5vh; width: 5vw;}
+    100% {height: 100vh; width: 100vw;}
   }
 `;
+  

@@ -1,20 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
 import Home from "./components/Home";
 import Question from "./components/Question";
-import End from "./components/GameOver";
+import GameOver from "./components/GameOver";
 import Message from "./components/Message";
 import { Container } from "../styles/home";
 
 
 const PrincipalContainer: NextPage = () => {
+  const [quizState, dispatch] = useState<number>(1);
   const [score, setScore] = useState<number>(0);
   const [showEnd, setShowEnd] = useState<boolean>(false);
-  const [afterFiveMinutes, setAfterFiveMinutes] = useState<boolean>(false);
+  const [afterFourMinutes, setAfterFourMinutes] = useState<boolean>(false);
   
-  const [quizState, dispatch] = useState<number>(1);
   
   const StartQuiz = () => {
     dispatch(quizState + 1);
@@ -31,7 +31,17 @@ const PrincipalContainer: NextPage = () => {
   const ResetQuiz = () => {
     dispatch(quizState - 1);
     setShowEnd(showEnd === true ? false : true);
+    setAfterFourMinutes(afterFourMinutes === true);
     setScore(0);
+  };
+  
+  const EventAfterFourMinutes = () => {
+    const timeout = setTimeout(() => {
+      setAfterFourMinutes(afterFourMinutes === true ? false : true);
+    }, 24000);
+    //}, 3000);
+    
+    return timeout;
   };
   
   return (
@@ -48,10 +58,10 @@ const PrincipalContainer: NextPage = () => {
         <>
           {showEnd ? (
             <>
-              {afterFiveMinutes ? (
-                <Message />
+              {afterFourMinutes ? (
+                <Message ResetQuiz={ResetQuiz} />
               ) : (
-                <End score={score} ResetQuiz={ResetQuiz} afterFiveMinutes={afterFiveMinutes} setAfterFiveMinutes={setAfterFiveMinutes}/>
+                <GameOver score={score} ResetQuiz={ResetQuiz} EventAfterFourMinutes={EventAfterFourMinutes} />
               )}
             </>
           ) : ( 
