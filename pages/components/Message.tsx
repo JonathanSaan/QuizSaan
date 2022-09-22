@@ -12,24 +12,21 @@ const Message = ({ ResetQuiz }: Props) => {
   const [hasTimeElapsed, setHasTimeElapsed] = useState<boolean>(true);
   
   useEffect(() => {
-    const EventHasTimeElapsed = () => {
-      setTimeout(() => {
+    const EventHasTimeElapsed = setTimeout(() => {
         setHasTimeElapsed(hasTimeElapsed === true ? false : true);
-      }, 40000);
-      //}, 1000);
-    };
+      }, 1000);
+      //}, 40000);
     
-    const EventBackToHome = () => {
-      setTimeout(() => {
+    const EventBackToHome = setTimeout(() => {
         setHasTimeElapsed(hasTimeElapsed === false ? true : false);
         ResetQuiz();
-      }, 41000);
-      //}, 2000);
-    };
+      }, 1100);
+      //}, 41000);
     
-    EventHasTimeElapsed();
-    EventBackToHome();
-    clearTimeout(EventBackToHome, EventHasTimeElapsed);
+    return () => {
+      clearTimeout(EventHasTimeElapsed);
+      clearTimeout(EventBackToHome);
+    };
   }, []);
   
   return (

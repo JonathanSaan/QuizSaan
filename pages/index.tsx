@@ -38,8 +38,8 @@ const PrincipalContainer: NextPage = () => {
   const EventAfterFourMinutes = () => {
     const timeout = setTimeout(() => {
       setAfterFourMinutes(afterFourMinutes === true ? false : true);
-    }, 24000);
-    //}, 3000);
+    }, 3000);
+    //}, 24000);
     
     return timeout;
   };

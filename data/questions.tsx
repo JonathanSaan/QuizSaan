@@ -40,8 +40,8 @@ const data = [
     questionText: 'When did Socrates live?',
     answerOptions: [
       { answerText: '467 - 400 BC', isCorrect: false },
-      { answerText: '470 - 398', isCorrect: false },
-      { answerText: '468 - 398', isCorrect: false },
+      { answerText: '470 - 398 BC', isCorrect: false },
+      { answerText: '468 - 398 BC', isCorrect: false },
       { answerText: '469 - 399 BC', isCorrect: true },
     ],
   },

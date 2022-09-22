@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Main, Title } from "../../styles/gameover";
 
 interface Props {
-  EventAfterFourMinutes(): void;
+  EventAfterFourMinutes: () => ReturnType<typeof setTimeout>;
   score: number;
   ResetQuiz(): void;
 }
