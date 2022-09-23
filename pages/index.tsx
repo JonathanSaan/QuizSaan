@@ -10,14 +10,14 @@ import { Container } from "../styles/home";
 
 
 const PrincipalContainer: NextPage = () => {
-  const [quizState, dispatch] = useState<number>(1);
+  const [quizState, setQuizState] = useState<number>(1);
   const [score, setScore] = useState<number>(0);
-  const [showEnd, setShowEnd] = useState<boolean>(false);
+  const [showEnd, setShowEnd] = useState<boolean>(true);
   const [afterFourMinutes, setAfterFourMinutes] = useState<boolean>(false);
   
   
   const StartQuiz = () => {
-    dispatch(quizState + 1);
+    setQuizState(quizState + 1);
   };
   
   const AddOneScore = () => {
@@ -26,21 +26,22 @@ const PrincipalContainer: NextPage = () => {
   
   const HandleShowScore = () => {
     setShowEnd(showEnd === false ? true : false);
+    setAfterFourMinutes(afterFourMinutes === true ? false : true);
   };
   
   const ResetQuiz = () => {
-    dispatch(quizState - 1);
-    setShowEnd(showEnd === true ? false : true);
-    setAfterFourMinutes(afterFourMinutes === true);
+    setQuizState(quizState - 1);
+    setShowEnd(showEnd === false ? true : false);
+    setAfterFourMinutes(afterFourMinutes === false ? true : false);
     setScore(0);
   };
   
   const EventAfterFourMinutes = () => {
     const timeout = setTimeout(() => {
       setAfterFourMinutes(afterFourMinutes === true ? false : true);
-    }, 3000);
-    //}, 24000);
-    
+      setScore(0);
+    }, 24000);
+    //}, 3000);
     return timeout;
   };
   
@@ -57,15 +58,15 @@ const PrincipalContainer: NextPage = () => {
        ) : (
         <>
           {showEnd ? (
+            <Question AddOneScore={AddOneScore} HandleShowScore={HandleShowScore} />
+          ) : ( 
             <>
               {afterFourMinutes ? (
-                <Message ResetQuiz={ResetQuiz} />
-              ) : (
                 <GameOver score={score} ResetQuiz={ResetQuiz} EventAfterFourMinutes={EventAfterFourMinutes} />
+              ) : (
+                <Message quizState={quizState} setQuizState={setQuizState} setShowEnd={setShowEnd} showEnd={showEnd} />
               )}
             </>
-          ) : ( 
-            <Question AddOneScore={AddOneScore} HandleShowScore={HandleShowScore} />
           )}
         </>
        )}

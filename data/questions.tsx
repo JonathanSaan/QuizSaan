@@ -72,6 +72,24 @@ const data = [
       { answerText: 'A superior man', isCorrect: true },
     ],
   },
+  {
+    questionText: 'According to Plato, what is knowledge?',
+    answerOptions: [
+      { answerText: 'There is no such thing as true knowledge', isCorrect: false },
+      { answerText: 'A justified true belief', isCorrect: true },
+      { answerText: 'That which can be proven', isCorrect: false },
+      { answerText: 'Opinion', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'The allegory of the cave argues what?',
+    answerOptions: [
+      { answerText: 'We are born with infinite knowledge.', isCorrect: false },
+      { answerText: 'Perceptions are sources of absolute knowledge.', isCorrect: false },
+      { answerText: 'There is value in ignorance.', isCorrect: false },
+      { answerText: 'Our perceptions may not be accurate', isCorrect: true },
+    ],
+  },
 ];
 
 export default data;

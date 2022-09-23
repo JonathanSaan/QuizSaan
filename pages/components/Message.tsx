@@ -4,24 +4,28 @@ import Typewriter from "typewriter-effect";
 import { Main, Title, JumpScare } from "../../styles/message";
 
 interface Props {
-  ResetQuiz(): void;
+  quizState: number;
+  setQuizState: any;
+  showEnd: boolean;
+  setShowEnd: any;
 }
 
 
-const Message = ({ ResetQuiz }: Props) => {
+const Message = ({ quizState, setQuizState, showEnd, setShowEnd }: Props) => {
   const [hasTimeElapsed, setHasTimeElapsed] = useState<boolean>(true);
   
   useEffect(() => {
     const EventHasTimeElapsed = setTimeout(() => {
-        setHasTimeElapsed(hasTimeElapsed === true ? false : true);
-      }, 1000);
-      //}, 40000);
+      setHasTimeElapsed(hasTimeElapsed === true ? false : true);
+    }, 40000);
+    //}, 1000);
     
     const EventBackToHome = setTimeout(() => {
-        setHasTimeElapsed(hasTimeElapsed === false ? true : false);
-        ResetQuiz();
-      }, 1100);
-      //}, 41000);
+      setHasTimeElapsed(hasTimeElapsed === false ? true : false);
+      setQuizState(quizState - 1);
+      setShowEnd(showEnd === false ? true : false);
+    }, 41000);
+    //}, 1100);
     
     return () => {
       clearTimeout(EventHasTimeElapsed);
