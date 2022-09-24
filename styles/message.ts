@@ -45,7 +45,6 @@ export const JumpScare = styled.div`
   
   img {
     animation: mymove 1s 1;
-    background: red;
   }
   
   @keyframes mymove {

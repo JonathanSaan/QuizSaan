@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { Howl } from "howler";
 import Typewriter from "typewriter-effect";
 import { Main, Title, JumpScare } from "../../styles/message";
 
@@ -13,19 +14,22 @@ interface Props {
 
 const Message = ({ quizState, setQuizState, showEnd, setShowEnd }: Props) => {
   const [hasTimeElapsed, setHasTimeElapsed] = useState<boolean>(true);
+  const sound = new Howl({
+    src: ["/audio/cat.mp3"],
+    html: true,
+  });
   
   useEffect(() => {
     const EventHasTimeElapsed = setTimeout(() => {
       setHasTimeElapsed(hasTimeElapsed === true ? false : true);
-    }, 40000);
-    //}, 1000);
+      sound.play();
+    }, 39500);
     
     const EventBackToHome = setTimeout(() => {
       setHasTimeElapsed(hasTimeElapsed === false ? true : false);
       setQuizState(quizState - 1);
       setShowEnd(showEnd === false ? true : false);
-    }, 41000);
-    //}, 1100);
+    }, 40500);
     
     return () => {
       clearTimeout(EventHasTimeElapsed);
@@ -60,10 +64,10 @@ const Message = ({ quizState, setQuizState, showEnd, setShowEnd }: Props) => {
       ) : (
         <JumpScare>
           <Image
-            src="/public/image/cat.png"
+            src="/image/cat.png"
             alt="jumping cat"
-            height="5vh"
-            width="5vw"
+            height="70em"
+            width="70em"
           />
         </JumpScare>
       )}

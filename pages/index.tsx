@@ -41,7 +41,6 @@ const PrincipalContainer: NextPage = () => {
       setAfterFourMinutes(afterFourMinutes === true ? false : true);
       setScore(0);
     }, 24000);
-    //}, 3000);
     return timeout;
   };
   
