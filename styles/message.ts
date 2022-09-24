@@ -13,13 +13,26 @@ export const Main = styled.div`
 
 export const Title = styled.h1`
   text-align: center;
-  font-family: monospace;
+  font-family: consolas;
   font-size: 5vh;
-  color: red;
+  animation: glitch 1s linear infinite;
+  color: #FFF;
   margin: auto 0;
   
   @media(max-width: 768px) {
     font-size: 7vw;
+  }
+    
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
   }
 `;
 
