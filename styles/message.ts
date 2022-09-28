@@ -16,7 +16,6 @@ export const Title = styled.h1`
   font-family: consolas;
   font-size: 5vh;
   animation: glitch 1s linear infinite;
-  color: #FFF;
   margin: auto 0;
   
   @media(max-width: 768px) {

@@ -19,6 +19,7 @@
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
+    "@types/howler": "^2.2.7",
     "@types/node": "18.7.17",
     "@types/react": "18.0.19",
     "@types/react-dom": "18.0.6",

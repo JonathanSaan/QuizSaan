@@ -18,6 +18,15 @@ const data = [
     ],
   },
   {
+    questionText: 'What sport is best known as the ‘king of sports’?',
+    answerOptions: [
+      { answerText: 'Basketball', isCorrect: false },
+      { answerText: 'Soccer', isCorrect: true },
+      { answerText: 'Tennis', isCorrect: false },
+      { answerText: 'Boxing', isCorrect: false },
+    ],
+  },
+  {
     questionText: 'When the internet was invented?',
     answerOptions: [
       { answerText: '1980', isCorrect: false },
@@ -55,12 +64,21 @@ const data = [
     ],
   },
   {
-    questionText: 'Who was Philosopher the say the phrase "It is not what happens to you, but how you react to it that matters."? ',
+    questionText: 'Who was Philosopher the say the phrase "It is not what happens to you, but how you react to it that matters."?',
     answerOptions: [
       { answerText: 'Marcus Aurelius', isCorrect: false },
       { answerText: 'Seneca', isCorrect: false },
       { answerText: 'Epictetus', isCorrect: true },
       { answerText: 'Socrates', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'What is the total number of bones in an adult human body?',
+    answerOptions: [
+      { answerText: '200', isCorrect: false },
+      { answerText: '206', isCorrect: true },
+      { answerText: '202', isCorrect: false },
+      { answerText: '209', isCorrect: false },
     ],
   },
   {
@@ -84,10 +102,82 @@ const data = [
   {
     questionText: 'The allegory of the cave argues what?',
     answerOptions: [
-      { answerText: 'We are born with infinite knowledge.', isCorrect: false },
-      { answerText: 'Perceptions are sources of absolute knowledge.', isCorrect: false },
-      { answerText: 'There is value in ignorance.', isCorrect: false },
+      { answerText: 'We are born with infinite knowledge', isCorrect: false },
+      { answerText: 'Perceptions are sources of absolute knowledge', isCorrect: false },
+      { answerText: 'There is value in ignorance', isCorrect: false },
       { answerText: 'Our perceptions may not be accurate', isCorrect: true },
+    ],
+  },
+  {
+    questionText: 'Which kind of sport involves ascending inclined ice formations?',
+    answerOptions: [
+      { answerText: 'Diving', isCorrect: false },
+      { answerText: 'Ice climbing', isCorrect: true },
+      { answerText: 'Wakeboarding', isCorrect: false },
+      { answerText: 'Speedway', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'What year did boxing become a legal sport?',
+    answerOptions: [
+      { answerText: '1901', isCorrect: true },
+      { answerText: '1921', isCorrect: false },
+      { answerText: '1911', isCorrect: false },
+      { answerText: '1931', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'What was the IQ of Ted Kaczynski?',
+    answerOptions: [
+      { answerText: '169', isCorrect: false },
+      { answerText: '170', isCorrect: false },
+      { answerText: '180', isCorrect: false },
+      { answerText: '167', isCorrect: true },
+    ],
+  },
+  {
+    questionText: "What was Sisyphus' punishment for cheating death?",
+    answerOptions: [
+      { answerText: 'Push a rock up a hill but it would always come back to the same place', isCorrect: true },
+      { answerText: 'Everything and everyone he touches will turn to gold', isCorrect: false },
+      { answerText: 'To be locked in the darkest place of tartar', isCorrect: false },
+      { answerText: 'Having your liver eaten all day by a big eagle', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'Who developed c# programming language?',
+    answerOptions: [
+      { answerText: 'Rockstar Games', isCorrect: false },
+      { answerText: 'Tencent', isCorrect: false },
+      { answerText: 'Ubisoft', isCorrect: false },
+      { answerText: 'Microsoft', isCorrect: true },
+    ],
+  },
+  {
+    questionText: 'Who is the greatest god in mythology?',
+    answerOptions: [
+      { answerText: 'Poseidon', isCorrect: false },
+      { answerText: 'Zeus', isCorrect: true },
+      { answerText: 'Apollo', isCorrect: false },
+      { answerText: 'Hades', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'Who is the real founder of Microsoft?',
+    answerOptions: [
+      { answerText: 'Bill Gates and Paul Allen', isCorrect: true },
+      { answerText: 'Steve jobs', isCorrect: false },
+      { answerText: 'Larry Ellison and Warren Buffett', isCorrect: false },
+      { answerText: 'Markus Persson', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'How was Ted Kaczynski known?',
+    answerOptions: [
+      { answerText: 'A Samurai', isCorrect: false },
+      { answerText: 'A Calisthenic', isCorrect: false },
+      { answerText: 'A Ninja', isCorrect: false },
+      { answerText: 'Unabomber', isCorrect: true },
     ],
   },
 ];

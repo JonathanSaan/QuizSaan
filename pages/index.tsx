@@ -49,6 +49,9 @@ const PrincipalContainer: NextPage = () => {
       <Head>
         <title>QuizSaan</title>
         <meta name="description" content="A Quiz made with NextJs by JonathanSaan" />
+        <meta charSet="UTF-8" />
+        <meta name="keywords" content="quiz, html, javascript, internet, sport, philosopher, philosophy, anatomy, hack, hacking" />
+        <meta name="author" content="JonathanSaan" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       

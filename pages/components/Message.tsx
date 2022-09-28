@@ -16,7 +16,7 @@ const Message = ({ quizState, setQuizState, showEnd, setShowEnd }: Props) => {
   const [hasTimeElapsed, setHasTimeElapsed] = useState<boolean>(true);
   const sound = new Howl({
     src: ["/audio/cat.mp3"],
-    html: true,
+    html5: true,
   });
   
   useEffect(() => {
