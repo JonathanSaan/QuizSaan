@@ -6,6 +6,10 @@ export const Main = styled.div`
   align-items: center;
   min-height: 100vh;
   
+  h2 {
+    text-align: center;
+  }
+  
   button {
     border: 1px solid #808080ff;
     margin: 27vh 0 0;

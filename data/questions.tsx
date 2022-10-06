@@ -154,7 +154,7 @@ const data = [
     ],
   },
   {
-    questionText: 'Who is the greatest god in mythology?',
+    questionText: 'Who is the greatest god in Greek mythology?',
     answerOptions: [
       { answerText: 'Poseidon', isCorrect: false },
       { answerText: 'Zeus', isCorrect: true },
