@@ -40,7 +40,7 @@ const PrincipalContainer: NextPage = () => {
     const timeout = setTimeout(() => {
       setAfterFourMinutes(afterFourMinutes === true ? false : true);
       setScore(0);
-    }, 24000);
+    }, 240000);
     return timeout;
   };
   
