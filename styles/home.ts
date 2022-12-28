@@ -12,6 +12,7 @@ export const Main = styled.div`
   min-height: 100vh;
   
   button {
+    cursor: pointer;
     border: 1px solid #808080ff;
     padding: 1em 2em;
   }

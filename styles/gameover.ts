@@ -11,6 +11,7 @@ export const Main = styled.div`
   }
   
   button {
+    cursor: pointer;
     border: 1px solid #808080ff;
     margin: 27vh 0 0;
     padding: 1em 2em;
