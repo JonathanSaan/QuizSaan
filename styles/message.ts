@@ -51,4 +51,3 @@ export const JumpScare = styled.div`
     100% {height: 100vh; width: 100vw;}
   }
 `;
-  

@@ -9,21 +9,16 @@ interface Props {
   StartQuiz(): void;
 }
 
-
 const Home = ({ StartQuiz }: Props) => {
   useEffect(() => {
     AOS.init({ duration: 2500 });
     AOS.refresh();
   }, []);
-  
+
   return (
     <Main data-aos="fade-in">
-      <Title>
-        Quiz
-      </Title>
-      <button onClick={StartQuiz}>
-        Start
-      </button>
+      <Title>Quiz</Title>
+      <button onClick={StartQuiz}>Start</button>
     </Main>
   );
 };

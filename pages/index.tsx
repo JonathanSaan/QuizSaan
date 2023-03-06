@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -54,24 +54,36 @@ const PrincipalContainer: NextPage = () => {
         <meta name="author" content="JonathanSaan" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       {quizState === 1 ? (
         <Home StartQuiz={StartQuiz} />
-       ) : (
+      ) : (
         <>
           {showEnd ? (
-            <Question AddOneScore={AddOneScore} HandleShowScore={HandleShowScore} />
-          ) : ( 
+            <Question
+              AddOneScore={AddOneScore}
+              HandleShowScore={HandleShowScore}
+            />
+          ) : (
             <>
               {afterFourMinutes ? (
-                <GameOver score={score} ResetQuiz={ResetQuiz} EventAfterFourMinutes={EventAfterFourMinutes} />
+                <GameOver
+                  score={score}
+                  ResetQuiz={ResetQuiz}
+                  EventAfterFourMinutes={EventAfterFourMinutes}
+                />
               ) : (
-                <Message quizState={quizState} setQuizState={setQuizState} setShowEnd={setShowEnd} showEnd={showEnd} />
+                <Message
+                  quizState={quizState}
+                  setQuizState={setQuizState}
+                  setShowEnd={setShowEnd}
+                  showEnd={showEnd}
+                />
               )}
             </>
           )}
         </>
-       )}
+      )}
     </Container>
   );
 };

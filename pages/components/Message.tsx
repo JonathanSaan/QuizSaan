@@ -11,32 +11,31 @@ interface Props {
   setShowEnd: any;
 }
 
-
 const Message = ({ quizState, setQuizState, showEnd, setShowEnd }: Props) => {
   const [hasTimeElapsed, setHasTimeElapsed] = useState<boolean>(true);
   const sound = new Howl({
     src: ["/audio/cat.mp3"],
     html5: true,
   });
-  
+
   useEffect(() => {
     const EventHasTimeElapsed = setTimeout(() => {
       setHasTimeElapsed(hasTimeElapsed === true ? false : true);
       sound.play();
     }, 39500);
-    
+
     const EventBackToHome = setTimeout(() => {
       setHasTimeElapsed(hasTimeElapsed === false ? true : false);
       setQuizState(quizState - 1);
       setShowEnd(showEnd === false ? true : false);
     }, 40500);
-    
+
     return () => {
       clearTimeout(EventHasTimeElapsed);
       clearTimeout(EventBackToHome);
     };
   }, []);
-  
+
   return (
     <Main data-aos="fade-in">
       {hasTimeElapsed ? (
@@ -48,15 +47,15 @@ const Message = ({ quizState, setQuizState, showEnd, setShowEnd }: Props) => {
               deleteSpeed: 100,
               loop: false,
               strings: [
-                'Hello?',
-                'Is there someone else?',
-                '...',
-                'I know you are there.',
-                'Answer me!',
-                'Now!',
-                '...',
-                'Okay...',
-                'You will regret.',
+                "Hello?",
+                "Is there someone else?",
+                "...",
+                "I know you are there.",
+                "Answer me!",
+                "Now!",
+                "...",
+                "Okay...",
+                "You will regret.",
               ],
             }}
           />
